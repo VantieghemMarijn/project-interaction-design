@@ -1,0 +1,614 @@
+/*------------------------------------*\
+#FONTS
+\*------------------------------------*/
+
+/*------------------------------------*\
+#Variables
+\*------------------------------------*/
+
+:root {
+    /* colors */
+    --global-color-light:#CCC8DC;
+    --global-color-dark:#0a304f;
+    --global-color-darker:#484579;
+    --global-backgroundColor:var(--global-color-dark);
+    --global-color:var(--global-color-darker);
+
+    /* opacity */
+
+    /* transitions */
+}
+
+/*------------------------------------*\
+#GENERIC
+\*------------------------------------*/
+
+/*
+    Generic: Page
+    ---
+    Global page styles + universal box-sizing:
+*/
+
+html {
+    
+    background-color: var(--global-backgroundColor);
+    color: var(--global-color);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    font-family: 'Work Sans', sans-serif;
+    font-feature-settings: "zero" 1;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/*
+* Remove text-shadow in selection highlight:
+* https://twitter.com/miketaylr/status/12228805301
+*
+* Customize the background color to match your design.
+*/
+
+::-moz-selection {
+    background: red;
+    color: white;
+    text-shadow: none;
+}
+
+::selection {
+    background: var(--global-color);
+    color: var(--global-backgroundColor);
+    text-shadow: none;
+}
+
+/*------------------------------------*\
+#Elements
+\*------------------------------------*/
+
+/*
+Elements: Images
+---
+Default markup for images to make them responsive
+*/
+
+img {
+    max-width: 100%;
+    vertical-align: top;
+}
+
+/*
+    Elements: typography
+    ---
+    Default markup for typographic elements
+*/
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 36px;
+    line-height: 48px;
+    /*margin: 0 0 24px;*/
+}
+
+h2 {
+    font-size: 32px;
+    line-height: 40px;
+    margin: 0 0 24px;
+}
+
+h3 {
+    font-size: 26px;
+    line-height: 32px;
+    margin: 0 0 24px;
+}
+
+h4,
+h5,
+h6 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    margin: 0 0 24px;
+}
+
+p,
+ol,
+ul,
+dl,
+table,
+address,
+figure {
+    margin: 0 0 24px;
+    
+}
+
+ul,
+ol {
+    padding-left: 24px;
+}
+
+li ul,
+li ol {
+    margin-bottom: 0;
+}
+
+blockquote {
+    font-style: normal;
+    font-size: 23px;
+    line-height: 32px;
+    margin: 0 0 24px;
+}
+
+blockquote * {
+    font-size: inherit;
+    line-height: inherit;
+}
+
+figcaption {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 8px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: LightGrey;
+    margin: 0 0 24px;
+}
+
+a {
+    color: var(--global-color);
+    
+    outline-offset: 2px;
+    text-decoration: none;
+}
+
+a:visited,
+a:active {
+    color: ;
+}
+
+a:hover,
+a:focus {
+    color: #7E79B8;
+}
+
+label,
+input {
+    display: block;
+}
+
+select {
+    width: 100%;
+}
+
+input::placeholder {
+    color: gray;
+}
+
+/*------------------------------------*\
+#OBJECTS
+\*------------------------------------*/
+
+/*
+    Object: Button reset
+    ---
+    Small button reset object
+*/
+
+.o-button-reset {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+
+    /* Corrects inability to style clickable `input` types in iOS */
+    -webkit-appearance: none;
+}
+
+/*
+    Object: Hide accessible
+    ---
+    Accessibly hide any element
+*/
+
+.o-hide-accessible {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/*------------------------------------*\
+#COMPONENTS
+\*------------------------------------*/
+
+/*
+    Component: Logo
+    ---
+    Website main logo
+*/
+.c-info{
+    text-align: center;
+    color: white;
+}
+.c-button-view{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.c-button{
+    padding: 10px 20px;
+    border: solid 1px;
+    border-radius: 0.625em;
+    background-color: var(--global-color-light);
+}
+.c-content{
+    padding: 1em 40px;
+    
+}
+.c-content-landing{
+    padding: 1em 40px;
+    display: flex;
+    margin: 0 250px;
+    align-items: center;
+    
+}
+.c-description{
+    display: flex;
+    justify-content: center;
+}
+
+.c-title {
+    margin: 0;
+    color: var(--global-color-light);
+}
+/*
+andere manier voor alles aan bottom 
+c-app min heightop 100vh
+en ook op display flex en direction op column en dan op c-horizon margin-top auto
+*/
+
+.c-landingpage{
+    max-width: 1300px;
+    background-image: url(/img/background.png);
+    
+}
+
+.c-logo-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.c-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.c-logo-image {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 8px;
+    /*background-color: white;*/
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+.c-logo-image2 {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 8px;
+    /*background-color: white;*/
+    border-radius: 50%;
+    
+}
+
+.is-night{
+    --global-backgroundColor:var(--global-color-dark);
+    --global-color:var(--global-color-light);
+}
+.is-day{
+    --global-backgroundColor:var(--global-color-light);
+    --global-color:var(--global-color-dark);
+}
+.c-app-landing{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 1em;
+    min-height: 100vh;
+    background-color: var(--global-backgroundColor);
+}
+.c-app{
+    max-width: 24em;
+    margin: 0 auto;
+    padding: 1em;
+    min-height: 100vh;
+    background-color: var(--global-backgroundColor);
+}
+
+.c-image{
+    max-width: 20em;
+    height: auto;
+}
+.c-grid-pages{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);;
+    grid-template-rows: repeat(3, 1fr);;
+    row-gap: 20px;
+    column-gap: 20px;
+    
+}
+.c-grid-pages__items{
+    background-color: var(--global-color-light);
+    height: 8rem;
+    width: 8rem;
+    padding: 5px;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+.c-page-moonset{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.c-page-moonset svg{
+    width: 1em;
+    height: 1em;
+    margin-right: 5px;
+}
+.c-page-image{
+    width: 2.5rem;
+    height: 2.5rem; 
+}
+.c-page-imageview{
+    display: flex;
+    justify-content: center;
+}
+.c-page-time,.c-page-date{
+    text-align: center;
+}
+.c-detailpage{
+    background-color: var(--global-color-light);
+    height: 23rem;
+    margin: 0 40px;
+    border-radius: 3em; 
+    display: flex;
+    flex-direction: column;
+    
+}
+.c-detailpage svg{
+    display: inline;
+}
+.c-moon-image{
+    height:7rem ;
+    width: 7rem;
+}
+.c-detail-content{
+    display: flex;
+    justify-content: center;
+}
+.c-detail-grid{
+    width: 12rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    
+}
+
+.c-detail-grid p{
+    margin: 0;
+}
+.c-detail-nav{
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+.c-detail-moon{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    size: 1rem;
+}
+.c-detail-item{
+    display: flex;
+    justify-content: space-between;
+}
+.c-detail-item p {
+    margin: 5px ;
+    text-align: right;
+}
+
+
+
+
+
+
+
+/*------------------------------------*\
+#UTILITIES
+\*------------------------------------*/
+
+/*
+    Utilities: Mute
+    Mute with opacity
+*/
+/*grid utilities*/
+.u-column1{
+    grid-column: span 1;
+    
+}
+.u-column2{
+    grid-column: span 1;
+}
+.u-column3{
+    grid-column: span 3;
+}
+.u-column4{
+    grid-column: span 4;
+}
+.u-column5{
+    grid-column: span 5;
+}
+.u-column6{
+    grid-column: span 6;
+}
+.u-column7{
+    grid-column: span 7;
+}
+.u-column8{
+    grid-column: span 8;
+}
+/*rows*/
+.u-row1{
+    grid-row: span 1;
+
+}
+.u-row2{
+    grid-row: span 2;
+}
+.u-row3{
+    grid-row: span 3;
+}
+.u-row4{
+    grid-row: span 4;
+}
+.u-row5{
+    grid-row: span 5;
+}
+.u-row6{
+    grid-row: span 6;
+}
+.u-row7{
+    grid-row: span 7;
+}
+.u-row8{
+    grid-row: span 8;
+}
+.u-align-right{
+    text-align: right;
+}
+
+
+/*------------------------------------*\
+#STATES
+\*------------------------------------*/
+
+/*
+    Change the theme using CSS vars.
+*/
+
+/* Night version: just switch the light and dark vars */
+
+/*------------------------------------*\
+#MEDIA
+\*------------------------------------*/
+
+/*
+    Print styles.
+    ---
+    Inlined to avoid the additional HTTP request:
+    http://www.phpied.com/delay-loading-your-print-css/
+*/
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        /* Black prints faster:
+        http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+    /*
+    * Don't show links that are fragment identifiers,
+    * or use the `javascript:` pseudo protocol
+    */
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    /*
+    * Printing Tables:
+    * http://css-discuss.incutio.com/wiki/Printing_Tables
+    */
+    thead {
+        display: table-header-group;
+    }
+    tr,
+    img {
+        page-break-inside: avoid;
+
+    }
+    img {
+        -webkit-filter: drop-shadow(5px 5px 5px #222);
+        filter: drop-shadow(5px 5px 5px #222);
+      }
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+        color: black;
+    }
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
