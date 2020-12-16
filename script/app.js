@@ -316,8 +316,8 @@ const addEventListeners = function(){
 	if(document.querySelector(".js-card")){
 		
 		document.querySelector(".js-detail").addEventListener("click",function(){
-			console.log(window.location.host);
-			window.location.replace("/detail.html");
+			console.log(window.location);
+			window.location.replace("/project-interaction-design/detail.html");
 			
 		});
 		
