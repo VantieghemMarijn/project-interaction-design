@@ -334,8 +334,8 @@ const addEventListeners = function(){
 }
 document.addEventListener('DOMContentLoaded', function() {
 	// 1 We will query the API with longitude and latitude.
-	//getListAPI(); //will use for end
-	readTextFile("http://127.0.0.1:5500/tempData.json");
+	getListAPI(); //will use for end
+	//readTextFile("http://127.0.0.1:5500/tempData.json");
 	addEventListeners();
 	console.info("dom loaded");
 });
